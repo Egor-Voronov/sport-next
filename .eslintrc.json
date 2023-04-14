@@ -1,3 +1,4 @@
 {
+  "extends": "mantine",
   "extends": "next/core-web-vitals"
 }
