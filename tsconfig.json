@@ -14,15 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "compilerOptions": {
-      "strict": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/*": [
-          "./src/*"
-        ]
-      }
-    },
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
