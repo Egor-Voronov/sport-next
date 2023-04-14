@@ -2,7 +2,7 @@ import {AppProps} from "next/app";
 import Head from "next/head";
 import {MantineProvider} from "@mantine/core";
 
-export default function App(props: AppProps) {
+const App = (props: AppProps) => {
     const {Component, pageProps} = props;
 
     return (
@@ -30,3 +30,5 @@ export default function App(props: AppProps) {
         </>
     );
 }
+
+export default App
