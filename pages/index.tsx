@@ -1,9 +1,9 @@
-import { Button, Group } from "@mantine/core";
+import {Home} from "../src/screens/Home";
 
-export default function IndexPage() {
-  return (
-    <Group mt={50} position="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-    </Group>
-  );
+const HomePage = () => {
+    return (
+        <Home/>
+    );
 }
+
+export default HomePage
