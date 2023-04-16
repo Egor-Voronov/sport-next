@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useStyles} from "./styles";
 import type {ILinksProps} from "./types";
+import Link from "next/link";
 
 export const Links = ({links, onClose}: ILinksProps) => {
     const [active, setActive] = useState(links[0].link);
@@ -9,12 +10,12 @@ export const Links = ({links, onClose}: ILinksProps) => {
     return (
         <>
             {links.map((link) => (
-                <a
+                <Link
                     key={link.label}
                     href={link.link}
                     className={cx(classes.link, {[classes.linkActive]: active === link.link})}
                     onClick={(event) => {
-                        event.preventDefault();
+
                         setActive(link.link);
                         if (onClose) {
                             onClose()
@@ -22,7 +23,7 @@ export const Links = ({links, onClose}: ILinksProps) => {
                     }}
                 >
                     {link.label}
-                </a>
+                </Link>
             ))}
         </>
     );
