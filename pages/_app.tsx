@@ -1,9 +1,22 @@
 import {AppProps} from "next/app";
 import Head from "next/head";
 import {MantineProvider} from "@mantine/core";
+import {HeaderModule} from "../src/modules/Header";
+import {FaGithub, FaLinkedinIn, FaTelegramPlane} from "react-icons/fa";
 
 const App = (props: AppProps) => {
     const {Component, pageProps} = props;
+
+    const linksProps = [
+        {link: "/", label: "На главную"},
+        {link: "/about", label: "О нас"},
+        {link: "/catalog", label: "Каталог"},
+    ];
+    const socialProps = [
+        {Icon: FaTelegramPlane, link: "https://t.me/Egor_Voronov_Dev"},
+        {Icon: FaGithub, link: "https://github.com/Egor-Voronov"},
+        {Icon: FaLinkedinIn, link: "https://t.me/Egor_Voronov_Dev"},
+    ];
 
     return (
         <>
@@ -25,6 +38,7 @@ const App = (props: AppProps) => {
                     loader: "bars"
                 }}
             >
+                <HeaderModule links={linksProps} socials={socialProps}/>
                 <Component {...pageProps} />
             </MantineProvider>
         </>
