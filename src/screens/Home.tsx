@@ -1,13 +1,14 @@
-import {HeaderMiddle} from "../modules/Header";
+import {HeaderModule} from "../modules/Header";
+
 
 export const Home = () => {
-    const links = [
-        { link: "/", label: "Home" },
-        { link: "/about", label: "About" },
-        { link: "/contact", label: "Contact" },
+    const linksProps = [
+        {link: "/", label: "На главную"},
+        {link: "/about", label: "О нас"},
+        {link: "/catalog", label: "Каталог"},
     ];
-
+    
     return (
-        <HeaderMiddle links={links} />
+        <HeaderModule links={linksProps}/>
     );
 }
