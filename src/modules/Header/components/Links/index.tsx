@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Group } from '@mantine/core';
 import { useStyles } from "./styles";
 import {ILinksProps} from "./types";
+
 export const Links = ({ links }: ILinksProps) => {
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();

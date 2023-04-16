@@ -7,7 +7,7 @@ export const Home = () => {
         {link: "/about", label: "О нас"},
         {link: "/catalog", label: "Каталог"},
     ];
-    
+
     return (
         <HeaderModule links={linksProps}/>
     );
