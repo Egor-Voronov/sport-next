@@ -13,11 +13,11 @@ export function HeaderModule({ links, socials }: ILinksProps & ISocialProps) {
     return (
         <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
             <Container className={classes.header}>
-                <Group spacing={5} className={classes.links}>
+                <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links} />
                 </Group>
                 <img src="./favicon.svg" alt="img" />
-                <Group className={classes.socials}>
+                <Group className={classes.socialsDesktop}>
                     <Socials socials={socials} />
                 </Group>
 

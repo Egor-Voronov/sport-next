@@ -31,13 +31,13 @@ export const useStyles = createStyles((theme) => ({
         height: '100%',
     },
 
-    links: {
+    linksDesktop: {
         [theme.fn.smallerThan('sm')]: {
             display: 'none',
         },
     },
 
-    socials: {
+    socialsDesktop: {
         [theme.fn.smallerThan('sm')]: {
             display: 'none',
         },
