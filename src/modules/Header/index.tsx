@@ -3,7 +3,7 @@ import {useDisclosure} from '@mantine/hooks';
 import {HEADER_HEIGHT, useStyles} from "./styles";
 import {Links} from "./components/Links";
 import type {ILinksProps} from "./components/Links/types";
-
+import {Socials} from "./components/Socials";
 
 export function HeaderModule({links}: ILinksProps) {
     const [opened, {toggle, close}] = useDisclosure(false);
@@ -12,9 +12,12 @@ export function HeaderModule({links}: ILinksProps) {
     return (
         <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
             <Container className={classes.header}>
-                <img src="./favicon.svg" alt="img"/>
                 <Group spacing={5} className={classes.links}>
                     <Links links={links}/>
+                </Group>
+                <img src="./favicon.svg" alt="img"/>
+                <Group className={classes.socials}>
+                    <Socials/>
                 </Group>
 
                 <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm"/>
@@ -23,6 +26,7 @@ export function HeaderModule({links}: ILinksProps) {
                     {(styles) => (
                         <Paper className={classes.dropdown} withBorder style={styles}>
                             <Links links={links} onClose={close}/>
+                            <Socials />
                         </Paper>
                     )}
                 </Transition>

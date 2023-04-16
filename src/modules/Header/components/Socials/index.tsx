@@ -6,7 +6,7 @@ export const Socials = () => {
     const theme = useMantineTheme();
     const {classes, cx} = useStyles();
     return (
-        <Group spacing={0} className={classes.social} position="right" noWrap>
+        <Group spacing={5} className={classes.social} noWrap>
             <ActionIcon size="lg">
                 <FaTelegramPlane size="1.1rem" color={theme.colors.blue[6]}/>
             </ActionIcon>

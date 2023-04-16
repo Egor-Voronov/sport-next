@@ -2,11 +2,12 @@ import {createStyles, rem} from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
     social: {
-        width: rem(260),
+        width: "auto",
 
         [theme.fn.smallerThan('sm')]: {
             width: 'auto',
-            marginLeft: 'auto',
+            display: 'flex',
+            justifyContent: 'center',
         },
     },
 }));
