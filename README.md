@@ -2,7 +2,7 @@
 
 ## to install deps
 ```sh
-yarn dev
+yarn
 ```
 ## to run dev mode
 ```sh
