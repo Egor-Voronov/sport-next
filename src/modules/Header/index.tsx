@@ -1,10 +1,12 @@
 import {Burger, Container, Group, Header, Paper, Transition,} from '@mantine/core';
+import Image from 'next/image'
 import {useDisclosure} from '@mantine/hooks';
 import {HEADER_HEIGHT, useStyles} from "./styles";
 import type {ILinksProps} from "./components/Links/types";
 import {Links} from "./components/Links";
 import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
+import logo from 'assets/logo.png'
 
 export function HeaderModule({ links, socials }: ILinksProps & ISocialProps) {
     const [opened, { toggle, close }] = useDisclosure(false);
@@ -16,7 +18,7 @@ export function HeaderModule({ links, socials }: ILinksProps & ISocialProps) {
                 <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links} />
                 </Group>
-                <img src="./favicon.svg" alt="img" />
+                <Image priority width={30} height={30} src={logo} alt="img" />
                 <Group className={classes.socialsDesktop}>
                     <Socials socials={socials} />
                 </Group>
