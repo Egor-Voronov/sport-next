@@ -1,5 +1,12 @@
+import Head from 'next/head'
+
 export const About = () => {
     return (
-        <h1>АБОУТ</h1>
+        <>
+            <Head>
+                <title>О нас</title>
+            </Head>
+            <h1>АБОУТ</h1>
+        </>
     );
 }

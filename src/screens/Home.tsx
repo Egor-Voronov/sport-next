@@ -1,5 +1,12 @@
+import Head from 'next/head'
+
 export const Home = () => {
     return (
-        <h1>fdsfsfs</h1>
+        <>
+            <Head>
+                <title>Sport-Next</title>
+            </Head>
+            <h1>fdsfsfs</h1>
+        </>
     );
 }
