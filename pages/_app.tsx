@@ -1,7 +1,7 @@
 import {AppProps} from "next/app";
 import Head from "next/head";
 import {MantineProvider} from "@mantine/core";
-import {HeaderModule} from "../src/modules/Header";
+import {HeaderModule} from "src/modules/Header";
 import {FaGithub, FaLinkedinIn, FaTelegramPlane} from "react-icons/fa";
 
 const App = (props: AppProps) => {

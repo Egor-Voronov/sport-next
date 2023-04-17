@@ -1,4 +1,4 @@
-import {About} from "../src/screens/About"
+import {About} from "src/screens/About"
 
 const AboutPage = () => {
     return (
