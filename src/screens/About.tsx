@@ -1,11 +1,9 @@
-import Head from 'next/head'
+import {Meta} from 'src/components/seo/meta'
 
 export const About = () => {
     return (
         <>
-            <Head>
-                <title>О нас</title>
-            </Head>
+          <Meta title='О нас' description='Описание преимуществ Sport-Next'/>
             <h1>АБОУТ</h1>
         </>
     );

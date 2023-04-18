@@ -2,15 +2,14 @@ import {Button, Container, Group, Text, Title} from '@mantine/core';
 import Link from 'next/link'
 import Head from 'next/head'
 import {useStyles} from './styles'
+import {Meta} from 'src/components/seo/meta'
 
 export const NotFound = () => {
     const {classes} = useStyles();
 
     return (
         <>
-            <Head>
-                <title>Not found</title>
-            </Head>
+            <Meta title='Error 404 - Not Found'/>
             <Container className={classes.root}>
                 <div className={classes.label}>404</div>
                 <Title className={classes.title}>You have found a secret place.</Title>

@@ -1,7 +1,7 @@
 import {Button, Container, Group, Text, Title} from '@mantine/core';
 import {useRouter} from 'next/router'
-import Head from 'next/head'
 import {useStyles} from './styles'
+import {Meta} from 'src/components/seo/meta'
 
 export const ServerError = () => {
     const {classes} = useStyles();
@@ -9,9 +9,7 @@ export const ServerError = () => {
 
     return (
         <>
-            <Head>
-                <title>Server error</title>
-            </Head>
+            <Meta title='Error 500 - Server Error'/>
             <div className={classes.root}>
                 <Container>
                     <div className={classes.label}>500</div>
