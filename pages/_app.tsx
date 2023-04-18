@@ -1,22 +1,16 @@
 import {AppProps} from "next/app";
 import Head from "next/head";
-import {MantineProvider} from "@mantine/core";
+import {useState} from 'react';
+import {ColorSchemeProvider, ColorScheme, MantineProvider} from '@mantine/core';
 import {HeaderModule} from "src/modules/Header";
-import {FaGithub, FaLinkedinIn, FaTelegramPlane} from "react-icons/fa";
+import {linksProps, socialProps} from 'src/modules/Header/data/props'
 
 const App = (props: AppProps) => {
     const {Component, pageProps} = props;
+    const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+    const toggleColorScheme = (value?: ColorScheme) =>
+        setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
-    const linksProps = [
-        {link: "/", label: "На главную"},
-        {link: "/about", label: "О нас"},
-        {link: "/catalog", label: "Каталог"},
-    ];
-    const socialProps = [
-        {Icon: FaTelegramPlane, link: "https://t.me/Egor_Voronov_Dev"},
-        {Icon: FaGithub, link: "https://github.com/Egor-Voronov"},
-        {Icon: FaLinkedinIn, link: "https://t.me/Egor_Voronov_Dev"},
-    ];
 
     return (
         <>
@@ -29,18 +23,19 @@ const App = (props: AppProps) => {
                 />
             </Head>
 
-            <MantineProvider
-                withGlobalStyles
-                withNormalizeCSS
-                theme={{
-                    /** Put your mantine theme override here */
-                    colorScheme: "light",
-                    loader: "bars"
-                }}
-            >
-                <HeaderModule links={linksProps} socials={socialProps}/>
-                <Component {...pageProps} />
-            </MantineProvider>
+            <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+                <MantineProvider
+                    withGlobalStyles
+                    withNormalizeCSS
+                    theme={{
+                        colorScheme,
+                        loader: "bars"
+                    }}
+                >
+                    <HeaderModule links={linksProps} socials={socialProps}/>
+                    <Component {...pageProps} />
+                </MantineProvider>
+            </ColorSchemeProvider>
         </>
     );
 }

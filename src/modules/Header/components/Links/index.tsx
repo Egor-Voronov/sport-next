@@ -15,7 +15,6 @@ export const Links = ({links, onClose}: ILinksProps) => {
                     href={link.link}
                     className={cx(classes.link, {[classes.linkActive]: active === link.link})}
                     onClick={(event) => {
-
                         setActive(link.link);
                         if (onClose) {
                             onClose()
