@@ -7,7 +7,6 @@ import type {ILinksProps} from "./components/Links/types";
 import {Links} from "./components/Links";
 import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
-import logo from 'assets/logo.png'
 
 export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
     const [opened, {toggle, close}] = useDisclosure(false);
@@ -20,7 +19,7 @@ export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
                     <Links links={links}/>
                 </Group>
                 <Link href='/#hero'>
-                    <Image priority width={30} height={30} src={logo} alt="img"/>
+                    <Image priority width={30} height={30} src='/assets/logo.svg' alt="img"/>
                 </Link>
                 <Group className={classes.socialsDesktop}>
                     <Socials socials={socials}/>

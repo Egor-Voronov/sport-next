@@ -22,7 +22,7 @@ const App = (props: AppProps) => {
         <>
             <Head>
                 <title>Sport-Next</title>
-                <link rel="icon" href="/favicon.svg"/>
+                <link rel="icon" href="/assets/favicon.svg"/>
                 <meta
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width"
