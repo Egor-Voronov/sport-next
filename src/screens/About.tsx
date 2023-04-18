@@ -1,4 +1,4 @@
-import {Meta} from 'src/components/seo/meta'
+import {Meta} from 'src/components/Meta'
 
 export const About = () => {
     return (

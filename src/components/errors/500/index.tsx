@@ -1,7 +1,7 @@
 import {Button, Container, Group, Text, Title} from '@mantine/core';
 import {useRouter} from 'next/router'
 import {useStyles} from './styles'
-import {Meta} from 'src/components/seo/meta'
+import {Meta} from 'src/components/Meta'
 
 export const ServerError = () => {
     const {classes} = useStyles();

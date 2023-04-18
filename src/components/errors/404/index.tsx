@@ -2,7 +2,7 @@ import {Button, Container, Group, Text, Title} from '@mantine/core';
 import Link from 'next/link'
 import Head from 'next/head'
 import {useStyles} from './styles'
-import {Meta} from 'src/components/seo/meta'
+import {Meta} from 'src/components/Meta'
 
 export const NotFound = () => {
     const {classes} = useStyles();
