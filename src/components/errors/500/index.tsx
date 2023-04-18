@@ -3,7 +3,7 @@ import {useRouter} from 'next/router'
 import Head from 'next/head'
 import {useStyles} from './styles'
 
-export function ServerError() {
+export const ServerError = () => {
     const {classes} = useStyles();
     const router = useRouter()
 

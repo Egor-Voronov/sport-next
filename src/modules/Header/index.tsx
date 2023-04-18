@@ -8,7 +8,7 @@ import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
 import logo from 'assets/logo.png'
 
-export function HeaderModule({ links, socials }: ILinksProps & ISocialProps) {
+export const HeaderModule = ({ links, socials }: ILinksProps & ISocialProps) => {
     const [opened, { toggle, close }] = useDisclosure(false);
     const { classes, cx } = useStyles();
 

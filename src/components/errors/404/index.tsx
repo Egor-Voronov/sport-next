@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import {useStyles} from './styles'
 
-export function NotFound() {
+export const NotFound = () => {
     const {classes} = useStyles();
 
     return (
