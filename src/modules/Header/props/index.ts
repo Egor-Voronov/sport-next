@@ -6,7 +6,8 @@ export const socialProps = [
     {Icon: FaLinkedinIn, link: "https://t.me/Egor_Voronov_Dev"},
 ];
 export const linksProps = [
-    {link: "/", label: "На главную"},
-    {link: "/about", label: "О нас"},
+    {link: "/", label: "Главная"},
     {link: "/catalog", label: "Каталог"},
+    {link: "/about", label: "О нас"},
+    {link: "/reviews", label: "Отзывы"},
 ];
