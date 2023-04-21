@@ -1,16 +1,11 @@
 import {AppProps} from "next/app";
 import Head from "next/head";
-import {useState} from 'react';
-import {ColorSchemeProvider, ColorScheme, MantineProvider} from '@mantine/core';
+import {MantineConfig} from 'src/components/MantineConfig'
 import {HeaderModule} from "src/modules/Header";
 import {linksProps, socialProps} from 'src/modules/Header/props'
 
 const App = (props: AppProps) => {
     const {Component, pageProps} = props;
-    const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
-    const toggleColorScheme = (value?: ColorScheme) =>
-        setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-
 
     return (
         <>
@@ -22,20 +17,10 @@ const App = (props: AppProps) => {
                     content="minimum-scale=1, initial-scale=1, width=device-width"
                 />
             </Head>
-
-            <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-                <MantineProvider
-                    withGlobalStyles
-                    withNormalizeCSS
-                    theme={{
-                        colorScheme,
-                        loader: "bars"
-                    }}
-                >
-                    <HeaderModule links={linksProps} socials={socialProps}/>
-                    <Component {...pageProps} />
-                </MantineProvider>
-            </ColorSchemeProvider>
+            <MantineConfig>
+                <HeaderModule links={linksProps} socials={socialProps}/>
+                <Component {...pageProps} />
+            </MantineConfig>
         </>
     );
 }
