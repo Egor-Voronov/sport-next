@@ -1,13 +1,11 @@
-import { useMantineColorScheme, ActionIcon, Group } from '@mantine/core';
-import { TbSun, TbMoonStars } from "react-icons/tb";
+import {ActionIcon, Group} from '@mantine/core';
+import {IToggleProps} from './types'
 
-export const ThemeToggle = () => {
-    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
+export const Toggle = ({onClick, children}: IToggleProps) => {
     return (
         <Group position="center" my="xl">
             <ActionIcon
-                onClick={() => toggleColorScheme()}
+                onClick={onClick}
                 size="lg"
                 sx={(theme) => ({
                     backgroundColor:
@@ -15,7 +13,7 @@ export const ThemeToggle = () => {
                     color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
                 })}
             >
-                {colorScheme === 'dark' ? <TbSun size="1.1rem" /> : <TbMoonStars size="1.2rem" />}
+                {children}
             </ActionIcon>
         </Group>
     );
