@@ -14,7 +14,7 @@ export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
     const {classes, cx} = useStyles();
 
     return (
-        <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+        <Header height={HEADER_HEIGHT} mb={40} className={classes.root}>
             <Container className={classes.header}>
                 <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links}/>
