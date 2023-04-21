@@ -7,8 +7,7 @@ import type {ILinksProps} from "./components/Links/types";
 import {Links} from "./components/Links";
 import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
-import {ThemeToggle} from "./components/toggles/ThemeToggle";
-
+import {ThemeToggle} from "./components/Toggles/";
 
 
 export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
@@ -27,7 +26,9 @@ export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
                 <Group className={classes.socialsDesktop}>
                     <Socials socials={socials}/>
                 </Group>
-                <ThemeToggle/>
+                <Group spacing={5}>
+                    <ThemeToggle/>
+                </Group>
 
                 <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm"/>
 

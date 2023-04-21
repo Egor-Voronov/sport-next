@@ -1,6 +1,6 @@
 import {useMantineColorScheme} from '@mantine/core';
 import {TbMoonStars, TbSun} from "react-icons/tb";
-import {Toggle} from "../ui/baseToggle"
+import {Toggle} from "./ui/baseToggle"
 
 export const ThemeToggle = () => {
     const {colorScheme, toggleColorScheme} = useMantineColorScheme();
@@ -8,6 +8,17 @@ export const ThemeToggle = () => {
     return (
         <Toggle onClick={() => toggleColorScheme()}>
             {colorScheme === 'dark' ? <TbSun size="1.1rem"/> : <TbMoonStars size="1.2rem"/>}
+        </Toggle>
+    );
+}
+
+export const LangToggle = () => {
+    const {colorScheme, toggleColorScheme} = useMantineColorScheme();
+
+    return (
+        <Toggle onClick={() => {
+        }}>
+            {colorScheme === 'dark' ? 'ру' : 'en'}
         </Toggle>
     );
 }
