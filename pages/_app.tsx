@@ -3,7 +3,7 @@ import Head from "next/head";
 import {useState} from 'react';
 import {ColorSchemeProvider, ColorScheme, MantineProvider} from '@mantine/core';
 import {HeaderModule} from "src/modules/Header";
-import {linksProps, socialProps} from 'src/modules/Header/data/props'
+import {linksProps, socialProps} from 'src/modules/Header/props'
 
 const App = (props: AppProps) => {
     const {Component, pageProps} = props;
