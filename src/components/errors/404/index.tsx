@@ -2,8 +2,9 @@ import {Button, Container, Group, Text, Title} from '@mantine/core';
 import Link from 'next/link'
 import {useStyles} from './styles'
 import {Meta} from 'src/components/Meta'
+import type {FC} from "react";
 
-export const NotFound = () => {
+export const NotFound: FC = () => {
     const {classes} = useStyles();
 
     return (

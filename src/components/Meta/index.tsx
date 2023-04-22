@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import type {IMeta} from "./types"
+import type {IMeta, TitleGenerator} from "./types"
+import type {FC, PropsWithChildren} from "react";
 
-const getTitle = (title: string) => `${title} | Sport-Next`
+const getTitle: TitleGenerator = (title: string) => `${title} | Sport-Next`
 
-export const Meta = ({title, description, children}: IMeta) => {
+export const Meta: FC<PropsWithChildren<IMeta>> = ({title, description, children}) => {
     return (
         <>
             <Head>

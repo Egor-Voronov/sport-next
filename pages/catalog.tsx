@@ -1,6 +1,7 @@
 import {Catalog} from "src/screens/Catalog"
+import type {NextPage} from "next";
 
-const CatalogPage = () => {
+const CatalogPage: NextPage = () => {
     return (
         <Catalog />
     );

@@ -1,8 +1,9 @@
 import {ActionIcon, Group, useMantineTheme} from "@mantine/core";
 import {useStyles} from "./styles";
 import type {ISocialProps} from './types'
+import type {FC, PropsWithChildren} from "react";
 
-export const Socials = ({socials}: ISocialProps) => {
+export const Socials: FC<PropsWithChildren<ISocialProps>> = ({socials}) => {
     const theme = useMantineTheme();
     const {classes, cx} = useStyles();
 

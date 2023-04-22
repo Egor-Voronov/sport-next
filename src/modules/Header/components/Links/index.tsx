@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
+import type {FC, PropsWithChildren} from 'react'
 import {useStyles} from "./styles";
 import type {ILinksProps} from "./types";
 import Link from "next/link";
 
-export const Links = ({links, onClose}: ILinksProps) => {
+export const Links: FC<PropsWithChildren<ILinksProps>> = ({links, onClose}) => {
     const [active, setActive] = useState(links[0].link);
     const {classes, cx} = useStyles();
 

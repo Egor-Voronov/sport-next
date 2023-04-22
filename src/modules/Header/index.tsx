@@ -8,9 +8,9 @@ import {Links} from "./components/Links";
 import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
 import {ThemeToggle} from "./components/Toggles/";
+import type {FC, PropsWithChildren} from "react";
 
-
-export const HeaderModule = ({links, socials}: ILinksProps & ISocialProps) => {
+export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = ({links, socials}) => {
     const [opened, {toggle, close}] = useDisclosure(false);
     const {classes, cx} = useStyles();
 

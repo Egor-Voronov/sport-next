@@ -1,6 +1,7 @@
 import {Home} from "src/screens/Home";
+import type {NextPage} from "next";
 
-const HomePage = () => {
+const HomePage: NextPage = () => {
     return (
         <Home/>
     );

@@ -2,8 +2,9 @@ import {Button, Container, Group, Text, Title} from '@mantine/core';
 import {useRouter} from 'next/router'
 import {useStyles} from './styles'
 import {Meta} from 'src/components/Meta'
+import type {FC} from "react";
 
-export const ServerError = () => {
+export const ServerError: FC = () => {
     const {classes} = useStyles();
     const router = useRouter()
 

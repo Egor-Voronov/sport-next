@@ -1,6 +1,7 @@
 import {About} from "src/screens/About"
+import type {NextPage} from "next";
 
-const AboutPage = () => {
+const AboutPage: NextPage = () => {
     return (
         <About/>
     );

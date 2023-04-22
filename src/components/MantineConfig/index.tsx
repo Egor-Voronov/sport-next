@@ -1,9 +1,9 @@
 import {ColorScheme, ColorSchemeProvider, MantineProvider} from '@mantine/core';
 import {IMantineConfigProps} from "./types"
 import {useColorScheme, useLocalStorage} from '@mantine/hooks';
+import type {FC, PropsWithChildren} from "react";
 
-
-export const MantineConfig = ({children}: IMantineConfigProps) => {
+export const MantineConfig: FC<PropsWithChildren<IMantineConfigProps>> = ({children}) => {
     const preferredColorScheme = useColorScheme();
     const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
         key: 'color-scheme',

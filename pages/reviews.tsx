@@ -1,6 +1,7 @@
 import {Reviews} from "src/screens/Reviews"
+import type {NextPage} from "next";
 
-const ReviewsPage = () => {
+const ReviewsPage: NextPage = () => {
     return (
         <Reviews />
     );

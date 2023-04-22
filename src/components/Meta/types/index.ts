@@ -5,3 +5,7 @@ export interface IMeta {
     description?: string;
     children?: ReactNode;
 }
+
+export interface TitleGenerator {
+    (title: string): string;
+}

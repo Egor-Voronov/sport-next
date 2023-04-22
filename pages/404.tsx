@@ -1,6 +1,7 @@
 import {NotFound} from "src/components/errors/404"
+import type {NextPage} from "next";
 
-const NotFoundPage = () => {
+const NotFoundPage: NextPage = () => {
     return (
         <NotFound />
     );

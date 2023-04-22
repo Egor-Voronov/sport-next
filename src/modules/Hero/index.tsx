@@ -1,7 +1,8 @@
 import {Button, Container, createStyles, Overlay, rem, Text, Title} from '@mantine/core';
 import {useStyles} from './styles'
+import type {FC} from "react";
 
-export const HeroModule = () => {
+export const HeroModule: FC = () => {
     const {classes} = useStyles();
 
     return (
