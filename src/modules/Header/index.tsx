@@ -7,7 +7,7 @@ import type {ILinksProps} from "./components/Links/types";
 import {Links} from "./components/Links";
 import type {ISocialProps} from "./components/Socials/types";
 import {Socials} from "./components/Socials";
-import {ThemeToggle} from "./components/Toggles/";
+import {ThemeToggle} from "./components/toggles";
 import type {FC, PropsWithChildren} from "react";
 
 export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = ({links, socials}) => {
