@@ -2,7 +2,7 @@ import {Button, Container, createStyles, Overlay, rem, Text, Title} from '@manti
 import {useStyles} from './styles'
 import type {FC} from "react";
 
-export const HeroModule: FC = () => {
+export const MainHeroModule: FC = () => {
     const {classes} = useStyles();
 
     return (
