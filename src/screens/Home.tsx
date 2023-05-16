@@ -6,7 +6,7 @@ export const Home: FC = () => {
     return (
         <>
             <Meta title='Главная' description='Универсальное торговое предложение, которое может дать Sport-Next'/>
-            <MainHeroModule backgroundImageUrl='assets/hero/heroBackground.jpg'/>
+            <MainHeroModule backgroundImageUrl='assets/hero/mainBackground.jpg'/>
         </>
     );
 }
