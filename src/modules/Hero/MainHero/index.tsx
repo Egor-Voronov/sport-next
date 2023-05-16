@@ -1,12 +1,16 @@
 import {Button, Container, createStyles, Overlay, rem, Text, Title} from '@mantine/core';
 import {useStyles} from './styles'
 import type {FC} from "react";
+import {PropsWithChildren} from "react";
+import {IMainHeroProps} from './types'
+import {ILinksProps} from "../../Header/components/Links/types";
+import {ISocialProps} from "../../Header/components/Socials/types";
 
-export const MainHeroModule: FC = () => {
+export const MainHeroModule: FC<PropsWithChildren<IMainHeroProps>> = ({backgroundImageUrl}) => {
     const {classes} = useStyles();
 
     return (
-        <div className={classes.hero}>
+        <div className={classes.hero} style={{ backgroundImage: `url(${backgroundImageUrl})`}}>
             <Overlay
                 gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
                 opacity={1}

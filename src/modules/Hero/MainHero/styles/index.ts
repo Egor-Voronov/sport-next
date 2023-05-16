@@ -3,8 +3,6 @@ import {createStyles, rem} from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
     hero: {
         position: 'relative',
-        backgroundImage:
-            'url(assets/hero/heroBackground.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },

@@ -15,14 +15,15 @@ export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = (
     const {classes, cx} = useStyles();
 
     return (
-        <Header height={HEADER_HEIGHT} mb={40} className={classes.root}>
+        <Header id='top' height={HEADER_HEIGHT} mb={40} className={classes.root}>
             <Container className={classes.header}>
                 <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links}/>
                 </Group>
-                <Link href='/#hero'>
+                <Link href='#top'>
                     <Image priority width={30} height={30} src='/assets/logo.svg' alt="img"/>
                 </Link>
+
                 <Group className={classes.socialsDesktop}>
                     <Socials socials={socials}/>
                 </Group>
