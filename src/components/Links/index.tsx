@@ -1,12 +1,19 @@
-import {useState} from 'react';
-import type {FC, PropsWithChildren} from 'react'
-import {useStyles} from "./styles";
-import type {ILinksProps} from "./types";
-import Link from "next/link";
+import React, { useContext } from 'react';
+import { LinksContext } from './LinksContext';
+import { useStyles } from './styles';
+import { ILinksProps } from './types';
+import Link from 'next/link';
 
-export const Links: FC<PropsWithChildren<ILinksProps>> = ({links, onClose}) => {
-    const [active, setActive] = useState(links[0].link);
-    const {classes, cx} = useStyles();
+export const Links: React.FC<ILinksProps> = ({ links, onClose }) => {
+    const { active, setActiveLink } = useContext(LinksContext);
+    const { classes, cx } = useStyles();
+
+    const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+        setActiveLink(link);
+        if (onClose) {
+            onClose();
+        }
+    };
 
     return (
         <>
@@ -15,16 +22,11 @@ export const Links: FC<PropsWithChildren<ILinksProps>> = ({links, onClose}) => {
                     key={link.label}
                     href={link.link}
                     className={cx(classes.link, {[classes.linkActive]: active === link.link})}
-                    onClick={(event) => {
-                        setActive(link.link);
-                        if (onClose) {
-                            onClose()
-                        }
-                    }}
+                    onClick={(event) => handleLinkClick(event, link.link)}
                 >
                     {link.label}
                 </Link>
             ))}
         </>
     );
-}
+};

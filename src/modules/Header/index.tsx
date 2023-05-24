@@ -20,7 +20,7 @@ export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = (
                 <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links}/>
                 </Group>
-                
+
                 <Link href='#top'>
                     <Image priority width={30} height={30} src='/assets/logo.svg' alt="img"/>
                 </Link>
