@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from 'next/image'
 import {useDisclosure} from '@mantine/hooks';
 import {HEADER_HEIGHT, useStyles} from "./styles";
-import type {ILinksProps} from "./components/Links/types";
-import {Links} from "./components/Links";
-import type {ISocialProps} from "./components/Socials/types";
-import {Socials} from "./components/Socials";
+import type {ILinksProps} from "../../components/Links/types";
+import {Links} from "../../components/Links";
+import type {ISocialProps} from "../../components/Socials/types";
+import {Socials} from "../../components/Socials";
 import {ThemeToggle} from "./components/toggles";
 import type {FC, PropsWithChildren} from "react";
 
@@ -20,6 +20,7 @@ export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = (
                 <Group spacing={5} className={classes.linksDesktop}>
                     <Links links={links}/>
                 </Group>
+                
                 <Link href='#top'>
                     <Image priority width={30} height={30} src='/assets/logo.svg' alt="img"/>
                 </Link>

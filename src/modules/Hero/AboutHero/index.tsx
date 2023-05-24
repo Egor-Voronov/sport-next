@@ -12,7 +12,7 @@ import {
 } from '@mantine/core';
 import {useStyles} from './styles'
 import {TbCheck} from 'react-icons/tb';
-import image from 'public/assets/hero/homeBackground.jpg';
+import image from 'public/assets/logo.svg';
 
 export const AboutHeroModule = () => {
     const {classes} = useStyles();

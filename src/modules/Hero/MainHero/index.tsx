@@ -3,8 +3,8 @@ import {useStyles} from './styles'
 import type {FC} from "react";
 import {PropsWithChildren} from "react";
 import {IMainHeroProps} from './types'
-import {ILinksProps} from "../../Header/components/Links/types";
-import {ISocialProps} from "../../Header/components/Socials/types";
+import {ILinksProps} from "../../../components/Links/types";
+import {ISocialProps} from "../../../components/Socials/types";
 
 export const MainHeroModule: FC<PropsWithChildren<IMainHeroProps>> = ({backgroundImageUrl}) => {
     const {classes} = useStyles();

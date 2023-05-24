@@ -3,6 +3,7 @@ import Head from "next/head";
 import {MantineConfig} from 'src/components/MantineConfig'
 import {HeaderModule} from "src/modules/Header";
 import {linksProps, socialProps} from 'src/modules/Header/props'
+import {FooterModule} from "../src/modules/Footer";
 
 const App = (props: AppProps) => {
     const {Component, pageProps} = props;
@@ -20,6 +21,7 @@ const App = (props: AppProps) => {
             <MantineConfig>
                 <HeaderModule links={linksProps} socials={socialProps}/>
                 <Component {...pageProps} />
+                <FooterModule links={linksProps} socials={socialProps} />
             </MantineConfig>
         </>
     );
