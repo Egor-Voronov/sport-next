@@ -1,11 +1,13 @@
-import { createStyles, Anchor, Group, ActionIcon, rem } from '@mantine/core';
+import {createStyles, Anchor, Group, ActionIcon, rem} from '@mantine/core';
 import Link from "next/link";
 import Image from "next/image";
 import type {ILinksProps} from "../../components/Links/types";
 import {Links} from "../../components/Links";
+import {LinksContext} from "../../components/Links/LinksContext";
 import type {ISocialProps} from "../../components/Socials/types";
 import {Socials} from "../../components/Socials";
-import {FC, PropsWithChildren} from "react";
+import {FC, PropsWithChildren, useContext} from "react";
+import {Logo} from "../../components/Logo";
 
 const useStyles = createStyles((theme) => ({
     footer: {
@@ -26,6 +28,11 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
+    link: {
+        color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+        textDecoration: 'none',
+    },
+
     links: {
         [theme.fn.smallerThan('sm')]: {
             marginTop: theme.spacing.lg,
@@ -34,36 +41,34 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-interface FooterCenteredProps {
-    links: { link: string; label: string }[];
-}
 
 export const FooterModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = ({links, socials}) => {
-    const { classes } = useStyles();
+    const {classes} = useStyles()
+    const {active, setActiveLink} = useContext(LinksContext);
     const items = links.map((link) => (
-        <Anchor<'a'>
-            color="dimmed"
-            key={link.label}
-            href={link.link}
-            sx={{ lineHeight: 1 }}
-            size="sm"
-        >
-            {link.label}
-        </Anchor>
+        <Link href={link.link} key={link.label} className={classes.link}>
+            <Anchor<'a'>
+                onClick={() => setActiveLink(link.link)}
+                color="dimmed"
+                sx={{ lineHeight: 1 }}
+                size="sm"
+            >
+                {link.label}
+            </Anchor>
+        </Link>
     ));
 
     return (
+
         <div className={classes.footer}>
             <div className={classes.inner}>
 
                 <Group className={classes.links}>{items}</Group>
 
-                <Link href='#top'>
-                    <Image width={30} height={30} src='/assets/logo.svg' alt="img"/>
-                </Link>
+                <Logo/>
 
                 <Group spacing="xs" position="right" noWrap>
-                  <Socials socials={socials} />
+                    <Socials socials={socials}/>
                 </Group>
             </div>
         </div>

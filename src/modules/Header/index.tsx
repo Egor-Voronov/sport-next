@@ -9,10 +9,15 @@ import type {ISocialProps} from "../../components/Socials/types";
 import {Socials} from "../../components/Socials";
 import {ThemeToggle} from "./components/toggles";
 import type {FC, PropsWithChildren} from "react";
+import React, { useContext } from 'react';
+import { LinksContext } from "../../components/Links/LinksContext";
+import {Logo} from "../../components/Logo";
 
 export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = ({links, socials}) => {
     const [opened, {toggle, close}] = useDisclosure(false);
     const {classes, cx} = useStyles();
+
+    const { active, setActiveLink } = useContext(LinksContext);
 
     return (
         <Header id='top' height={HEADER_HEIGHT} mb={40} className={classes.root}>
@@ -21,9 +26,7 @@ export const HeaderModule: FC<PropsWithChildren<ILinksProps & ISocialProps>> = (
                     <Links links={links}/>
                 </Group>
 
-                <Link href='#top'>
-                    <Image priority width={30} height={30} src='/assets/logo.svg' alt="img"/>
-                </Link>
+               <Logo />
 
                 <Group className={classes.socialsDesktop}>
                     <Socials socials={socials}/>
