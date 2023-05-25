@@ -1,4 +1,7 @@
 {
-  "extends": "mantine",
-  "extends": "next/core-web-vitals"
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "extends": ["next/core-web-vitals", "eslint:recommended"]
 }

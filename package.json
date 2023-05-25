@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css}\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -25,6 +26,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "prettier": "^2.8.8",
     "typescript": "4.9.5"
   }
 }
