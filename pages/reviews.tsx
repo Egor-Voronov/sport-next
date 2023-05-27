@@ -1,10 +1,8 @@
-import {Reviews} from "src/screens/Reviews"
-import type {NextPage} from "next";
+import { Reviews } from "src/screens/Reviews";
+import type { NextPage } from "next";
 
 const ReviewsPage: NextPage = () => {
-    return (
-        <Reviews />
-    );
-}
+  return <Reviews />;
+};
 
-export default ReviewsPage
+export default ReviewsPage;

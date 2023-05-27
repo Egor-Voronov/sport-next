@@ -4,7 +4,7 @@ import { MantineConfig } from "src/components/MantineConfig";
 import { HeaderModule } from "src/modules/Header";
 import { linksProps, socialProps } from "src/modules/Header/props";
 import { FooterModule } from "../src/modules/Footer";
-import { LinksProvider } from "../src/ui/NavigationLinks/LinksContext";
+import { LinksProvider } from "../src/ui/NavigationLinks/NavigationLinksContext";
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props;

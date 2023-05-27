@@ -14,17 +14,14 @@ import type { ISocialProps } from "../../ui/Socials/types";
 import { Socials } from "../../ui/Socials";
 import { ThemeToggle } from "./components/toggles";
 import type { FC, PropsWithChildren } from "react";
-import React, { useContext } from "react";
-import { LinksContext } from "../../ui/NavigationLinks/LinksContext";
+import React from "react";
 import { Logo } from "../../ui/Logo";
 
 export const HeaderModule: FC<
   PropsWithChildren<INavigationLinksProps & ISocialProps>
 > = ({ links, socials }) => {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const { classes, cx } = useStyles();
-
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { classes } = useStyles();
 
   return (
     <Header id="top" height={HEADER_HEIGHT} mb={40} className={classes.root}>

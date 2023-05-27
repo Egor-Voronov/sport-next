@@ -1,10 +1,8 @@
-import {Catalog} from "src/screens/Catalog"
-import type {NextPage} from "next";
+import { Catalog } from "src/screens/Catalog";
+import type { NextPage } from "next";
 
 const CatalogPage: NextPage = () => {
-    return (
-        <Catalog />
-    );
-}
+  return <Catalog />;
+};
 
-export default CatalogPage
+export default CatalogPage;

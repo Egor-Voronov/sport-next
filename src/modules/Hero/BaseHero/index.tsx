@@ -1,20 +1,10 @@
-import {
-  Button,
-  Container,
-  createStyles,
-  Overlay,
-  rem,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Button, Container, Overlay, Text, Title } from "@mantine/core";
 import { useStyles } from "./styles";
 import type { FC } from "react";
 import { PropsWithChildren } from "react";
-import { IMainHeroProps } from "./types";
-import { ILinksProps } from "../../../ui/NavigationLinks/types";
-import { ISocialProps } from "../../../ui/Socials/types";
+import { IBaseHeroProps } from "./types";
 
-export const MainHeroModule: FC<PropsWithChildren<IMainHeroProps>> = ({
+export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
   backgroundImageUrl,
 }) => {
   const { classes } = useStyles();

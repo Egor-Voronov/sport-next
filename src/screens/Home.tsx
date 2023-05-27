@@ -1,12 +1,15 @@
-import {Meta} from 'src/components/Meta'
-import {MainHeroModule} from "../modules/Hero/MainHero";
-import type {FC} from "react";
+import { Meta } from "src/components/Meta";
+import { BaseHeroModule } from "../modules/Hero/BaseHero";
+import type { FC } from "react";
 
 export const Home: FC = () => {
-    return (
-        <>
-            <Meta title='Главная' description='Универсальное торговое предложение, которое может дать Sport-Next'/>
-            <MainHeroModule backgroundImageUrl='assets/hero/homeBackground.jpg' />
-        </>
-    );
-}
+  return (
+    <>
+      <Meta
+        title="Главная"
+        description="Универсальное торговое предложение, которое может дать Sport-Next"
+      />
+      <BaseHeroModule backgroundImageUrl="assets/hero/homeBackground.jpg" />
+    </>
+  );
+};

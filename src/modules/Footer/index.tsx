@@ -1,9 +1,8 @@
-import { createStyles, Anchor, Group, ActionIcon, rem } from "@mantine/core";
+import { Group } from "@mantine/core";
 import { useStyles } from "./styles";
 import Link from "next/link";
-import Image from "next/image";
 import type { INavigationLinksProps } from "../../ui/NavigationLinks/types";
-import { LinksContext } from "../../ui/NavigationLinks/LinksContext";
+import { LinksContext } from "../../ui/NavigationLinks/NavigationLinksContext";
 import type { ISocialProps } from "../../ui/Socials/types";
 import { Socials } from "../../ui/Socials";
 import { FC, PropsWithChildren, useContext } from "react";

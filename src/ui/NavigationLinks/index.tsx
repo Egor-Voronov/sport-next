@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LinksContext } from "./LinksContext";
+import { LinksContext } from "./NavigationLinksContext";
 import { useStyles } from "./styles";
 import { INavigationLinksProps } from "./types";
 import Link from "next/link";

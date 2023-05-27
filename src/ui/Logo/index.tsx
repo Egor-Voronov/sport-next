@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FC, useContext } from "react";
-import { LinksContext } from "../NavigationLinks/LinksContext";
+import { LinksContext } from "../NavigationLinks/NavigationLinksContext";
 
 export const Logo: FC = () => {
   const { active, setActiveLink } = useContext(LinksContext);

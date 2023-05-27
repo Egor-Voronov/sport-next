@@ -1,13 +1,13 @@
-import {createStyles, rem} from "@mantine/core";
+import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-    social: {
-        width: "auto",
+  social: {
+    width: "auto",
 
-        [theme.fn.smallerThan('sm')]: {
-            width: 'auto',
-            display: 'flex',
-            justifyContent: 'center',
-        },
+    [theme.fn.smallerThan("sm")]: {
+      width: "auto",
+      display: "flex",
+      justifyContent: "center",
     },
+  },
 }));

@@ -1,5 +1,5 @@
-import type {IconType} from "react-icons";
+import type { IconType } from "react-icons";
 
 export interface ISocialProps {
-    socials: { Icon: IconType, link: string }[]
+  socials: { Icon: IconType; link: string }[];
 }

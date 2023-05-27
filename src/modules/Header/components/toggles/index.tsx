@@ -1,25 +1,26 @@
-import {useMantineColorScheme} from '@mantine/core';
-import {TbMoonStars, TbSun} from "react-icons/tb";
-import {Toggle} from "./ui/baseToggle"
-import type {FC} from "react";
+import { useMantineColorScheme } from "@mantine/core";
+import { TbMoonStars, TbSun } from "react-icons/tb";
+import { Toggle } from "./ui/baseToggle";
+import type { FC } from "react";
 
 export const ThemeToggle: FC = () => {
-    const {colorScheme, toggleColorScheme} = useMantineColorScheme();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
-    return (
-        <Toggle onClick={() => toggleColorScheme()}>
-            {colorScheme === 'dark' ? <TbSun size="1.1rem"/> : <TbMoonStars size="1.2rem"/>}
-        </Toggle>
-    );
-}
+  return (
+    <Toggle onClick={() => toggleColorScheme()}>
+      {colorScheme === "dark" ? (
+        <TbSun size="1.1rem" />
+      ) : (
+        <TbMoonStars size="1.2rem" />
+      )}
+    </Toggle>
+  );
+};
 
 export const LangToggle: FC = () => {
-    const {colorScheme, toggleColorScheme} = useMantineColorScheme();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
-    return (
-        <Toggle onClick={() => {
-        }}>
-            {colorScheme === 'dark' ? 'ру' : 'en'}
-        </Toggle>
-    );
-}
+  return (
+    <Toggle onClick={() => {}}>{colorScheme === "dark" ? "ру" : "en"}</Toggle>
+  );
+};
