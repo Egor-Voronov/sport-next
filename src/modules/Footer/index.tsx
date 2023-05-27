@@ -2,16 +2,15 @@ import { createStyles, Anchor, Group, ActionIcon, rem } from "@mantine/core";
 import { useStyles } from "./styles";
 import Link from "next/link";
 import Image from "next/image";
-import type { ILinksProps } from "../../components/Links/types";
-import { Links } from "../../components/Links";
-import { LinksContext } from "../../components/Links/LinksContext";
-import type { ISocialProps } from "../../components/Socials/types";
-import { Socials } from "../../components/Socials";
+import type { INavigationLinksProps } from "../../ui/NavigationLinks/types";
+import { LinksContext } from "../../ui/NavigationLinks/LinksContext";
+import type { ISocialProps } from "../../ui/Socials/types";
+import { Socials } from "../../ui/Socials";
 import { FC, PropsWithChildren, useContext } from "react";
-import { Logo } from "../../components/Logo";
+import { Logo } from "../../ui/Logo";
 
 export const FooterModule: FC<
-  PropsWithChildren<ILinksProps & ISocialProps>
+  PropsWithChildren<INavigationLinksProps & ISocialProps>
 > = ({ links, socials }) => {
   const { classes } = useStyles();
   const { active, setActiveLink } = useContext(LinksContext);
