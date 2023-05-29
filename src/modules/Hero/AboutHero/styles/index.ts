@@ -4,8 +4,11 @@ export const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
     justifyContent: "space-between",
-    paddingTop: `calc(${theme.spacing.xl} * 4)`,
     paddingBottom: `calc(${theme.spacing.xl} * 4)`,
+
+    [theme.fn.largerThan("md")]: {
+      paddingTop: `calc(${theme.spacing.xl} * 4)`,
+    },
   },
 
   content: {
@@ -38,6 +41,7 @@ export const useStyles = createStyles((theme) => ({
 
   image: {
     flex: 1,
+    paddingTop: `calc(${theme.spacing.xl} * 4)`,
 
     [theme.fn.smallerThan("md")]: {
       display: "none",

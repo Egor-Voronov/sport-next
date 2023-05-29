@@ -2,6 +2,7 @@ import { createStyles, rem } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
   hero: {
+    zIndex: 0,
     position: "relative",
     backgroundSize: "cover",
     backgroundPosition: "center",

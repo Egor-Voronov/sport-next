@@ -12,22 +12,28 @@ import {
 import { useStyles } from "./styles";
 import { TbCheck } from "react-icons/tb";
 import image from "public/assets/logo.svg";
+import Link from "next/link";
+import { useContext } from "react";
+import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 
 export const AboutHeroModule = () => {
   const { classes } = useStyles();
+  const { active, setActiveLink } = useContext(LinksContext);
+
   return (
     <div>
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              A <span className={classes.highlight}>modern</span> React <br />{" "}
-              components library
+              <span className={classes.highlight}>SPORT NEXT</span> - <br /> Мы
+              предоставляем лучшие спортивные товары
             </Title>
             <Text color="dimmed" mt="md">
-              Build fully functional accessible web applications faster than
-              ever – Mantine includes more than 120 customizable components and
-              hooks to cover you in any situation
+              Мы предлагаем широкий ассортимент высококачественных спортивных
+              товаров. Независимо от вашего уровня подготовки или предпочтений в
+              спорте, мы стремимся быть вашим надежным партнером в достижении
+              успеха.
             </Text>
 
             <List
@@ -41,31 +47,38 @@ export const AboutHeroModule = () => {
               }
             >
               <List.Item>
-                <b>TypeScript based</b> – build type safe applications, all
-                components and hooks export types
+                <b>Высокое качество</b> – Наша команда постоянно отбирает только
+                самые качественные спортивные товары, чтобы обеспечить вам
+                надежность, долговечность и удовлетворение в каждой покупке.
               </List.Item>
               <List.Item>
-                <b>Free and open source</b> – all packages have MIT license, you
-                can use Mantine in any project
+                <b>Доступные цены</b> – Мы гордимся предлагаемыми нами
+                конкурентоспособными ценами, чтобы сделать спортивные товары
+                доступными для всех.
               </List.Item>
               <List.Item>
-                <b>No annoying focus ring</b> – focus ring will appear only when
-                user navigates with keyboard
+                <b>Широкий выбор</b> – Мы предлагаем разнообразие спортивных
+                товаров,чтобы удовлетворить любые потребности и предпочтения
+                спортсменов и спортивных энтузиастов.
               </List.Item>
             </List>
 
             <Group mt={30}>
-              <Button radius="xl" size="md" className={classes.control}>
-                Get started
-              </Button>
-              <Button
-                variant="default"
-                radius="xl"
-                size="md"
-                className={classes.control}
-              >
-                Source code
-              </Button>
+              <Link href="/catalog" onClick={() => setActiveLink("/catalog")}>
+                <Button radius="xl" size="md" className={classes.control}>
+                  В каталог
+                </Button>
+              </Link>
+              <Link href="/reviews" onClick={() => setActiveLink("/reviews")}>
+                <Button
+                  variant="default"
+                  radius="xl"
+                  size="md"
+                  className={classes.control}
+                >
+                  Смотреть отзывы
+                </Button>
+              </Link>
             </Group>
           </div>
           <Image
