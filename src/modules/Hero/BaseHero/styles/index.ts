@@ -24,6 +24,7 @@ export const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    maxWidth: 840,
     color: theme.white,
     fontSize: rem(60),
     fontWeight: 900,
@@ -42,7 +43,7 @@ export const useStyles = createStyles((theme) => ({
 
   description: {
     color: theme.white,
-    maxWidth: 600,
+    maxWidth: 800,
 
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",

@@ -1,13 +1,18 @@
 import { Button, Container, Overlay, Text, Title } from "@mantine/core";
 import { useStyles } from "./styles";
 import type { FC } from "react";
-import { PropsWithChildren } from "react";
-import { IBaseHeroProps, ITextProps } from "./types";
+import { PropsWithChildren, useContext } from "react";
+import { IBaseHeroProps } from "./types";
+import Link from "next/link";
+import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 
-export const BaseHeroModule: FC<
-  PropsWithChildren<IBaseHeroProps & ITextProps>
-> = ({ backgroundImageUrl, text }) => {
+export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
+  backgroundImageUrl,
+  text,
+  btnPath,
+}) => {
   const { classes } = useStyles();
+  const { active, setActiveLink } = useContext(LinksContext);
 
   return (
     <div
@@ -25,14 +30,16 @@ export const BaseHeroModule: FC<
           {text.paragraph}
         </Text>
 
-        <Button
-          variant="gradient"
-          size="xl"
-          radius="xl"
-          className={classes.control}
-        >
-          {text.button}
-        </Button>
+        <Link href={btnPath} onClick={() => setActiveLink(btnPath)}>
+          <Button
+            variant="gradient"
+            size="xl"
+            radius="xl"
+            className={classes.control}
+          >
+            {text.button}
+          </Button>
+        </Link>
       </Container>
     </div>
   );

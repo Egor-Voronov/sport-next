@@ -13,6 +13,7 @@ export const Home: FC = () => {
       <BaseHeroModule
         backgroundImageUrl="assets/hero/homeBackground.jpg"
         text={homeTxt}
+        btnPath="/catalog"
       />
     </>
   );
