@@ -3,7 +3,7 @@ import {
   ColorSchemeProvider,
   MantineProvider,
 } from "@mantine/core";
-import { IMantineConfigProps } from "./types";
+import type { IMantineConfigProps } from "./types";
 import { useColorScheme, useLocalStorage } from "@mantine/hooks";
 import type { FC, PropsWithChildren } from "react";
 

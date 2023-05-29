@@ -1,5 +1,5 @@
 import { ActionIcon, Group } from "@mantine/core";
-import { IToggleProps } from "./types";
+import type { IToggleProps } from "./types";
 import type { FC, PropsWithChildren } from "react";
 
 export const Toggle: FC<PropsWithChildren<IToggleProps>> = ({

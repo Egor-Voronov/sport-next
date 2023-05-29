@@ -1,4 +1,4 @@
-import { AppProps } from "next/app";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineConfig } from "src/components/MantineConfig";
 import { HeaderModule } from "src/modules/Header";

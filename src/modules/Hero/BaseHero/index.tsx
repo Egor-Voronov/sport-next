@@ -2,7 +2,7 @@ import { Button, Container, Overlay, Text, Title } from "@mantine/core";
 import { useStyles } from "./styles";
 import type { FC } from "react";
 import { PropsWithChildren, useContext } from "react";
-import { IBaseHeroProps } from "./types";
+import type { IBaseHeroProps } from "./types";
 import Link from "next/link";
 import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 

@@ -1,5 +1,5 @@
 import React, { createContext, useState, PropsWithChildren } from "react";
-import { LinksProviderProps, LinksContextProps } from "./types";
+import type { LinksProviderProps, LinksContextProps } from "./types";
 
 export const LinksContext = createContext<LinksContextProps>({
   active: "",

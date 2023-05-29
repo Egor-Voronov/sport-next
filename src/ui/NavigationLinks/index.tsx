@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LinksContext } from "./NavigationLinksContext";
 import { useStyles } from "./styles";
-import { INavigationLinksProps } from "./types";
+import type { INavigationLinksProps } from "./types";
 import Link from "next/link";
 
 export const NavigationLinks: React.FC<INavigationLinksProps> = ({

@@ -1,5 +1,5 @@
-import { DotsProps } from "./types";
-import { FC, PropsWithChildren } from "react";
+import type { DotsProps } from "./types";
+import type { FC, PropsWithChildren } from "react";
 
 export const Dots: FC<PropsWithChildren<DotsProps>> = ({
   size = 185,
