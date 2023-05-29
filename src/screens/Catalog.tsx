@@ -1,6 +1,7 @@
 import { Meta } from "src/components/Meta";
 import type { FC } from "react";
 import { BaseHeroModule } from "../modules/Hero/BaseHero";
+import { catalogTxt } from "../modules/Hero/BaseHero/props";
 
 export const Catalog: FC = () => {
   return (
@@ -9,7 +10,11 @@ export const Catalog: FC = () => {
         title="Каталог"
         description="Страница, на которой демонстрируется товар производимый Sport-Next"
       />
-      <BaseHeroModule backgroundImageUrl="assets/hero/catalogBackground.png" />
+      <BaseHeroModule
+        backgroundImageUrl="assets/hero/catalogBackground.png"
+        text={catalogTxt}
+        btnPath="/"
+      />
     </>
   );
 };

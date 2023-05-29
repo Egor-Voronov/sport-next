@@ -13,6 +13,7 @@ export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
 }) => {
   const { classes } = useStyles();
   const { active, setActiveLink } = useContext(LinksContext);
+  const splitHeading = text.heading.split("\n");
 
   return (
     <div
@@ -25,7 +26,15 @@ export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
         zIndex={0}
       />
       <Container className={classes.container}>
-        <Title className={classes.title}>{text.heading}</Title>
+        {splitHeading.map((line, index) => (
+          <Title
+            key={index}
+            className={classes.title}
+            style={{ display: "block" }}
+          >
+            {line}
+          </Title>
+        ))}
         <Text className={classes.description} size="xl" mt="xl">
           {text.paragraph}
         </Text>
