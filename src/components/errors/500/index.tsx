@@ -14,16 +14,15 @@ export const ServerError: FC = () => {
       <div className={classes.root}>
         <Container>
           <div className={classes.label}>500</div>
-          <Title className={classes.title}>
-            Something bad just happened...
-          </Title>
+          <Title className={classes.title}>Случилось что то нехорошее...</Title>
           <Text size="lg" align="center" className={classes.description}>
-            Our servers could not handle your request. Don&apos;t worry, our
-            development team was already notified. Try refreshing the page.
+            Наши серверы не смогли обработать ваш запрос. Не волнуйтесь, наша
+            команда разработчиков уже была уведомлена. Попробуйте обновить
+            страницу.
           </Text>
           <Group position="center">
             <Button variant="white" size="md" onClick={() => router.reload()}>
-              Refresh the page
+              Обновить страницу
             </Button>
           </Group>
         </Container>
