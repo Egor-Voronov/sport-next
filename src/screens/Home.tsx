@@ -1,5 +1,6 @@
 import { Meta } from "src/components/Meta";
 import { BaseHeroModule } from "../modules/Hero/BaseHero";
+import { homeTxt } from "../modules/Hero/BaseHero/props";
 import type { FC } from "react";
 
 export const Home: FC = () => {
@@ -9,7 +10,10 @@ export const Home: FC = () => {
         title="Главная"
         description="Универсальное торговое предложение, которое может дать Sport-Next"
       />
-      <BaseHeroModule backgroundImageUrl="assets/hero/homeBackground.jpg" />
+      <BaseHeroModule
+        backgroundImageUrl="assets/hero/homeBackground.jpg"
+        text={homeTxt}
+      />
     </>
   );
 };

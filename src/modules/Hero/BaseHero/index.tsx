@@ -2,11 +2,11 @@ import { Button, Container, Overlay, Text, Title } from "@mantine/core";
 import { useStyles } from "./styles";
 import type { FC } from "react";
 import { PropsWithChildren } from "react";
-import { IBaseHeroProps } from "./types";
+import { IBaseHeroProps, ITextProps } from "./types";
 
-export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
-  backgroundImageUrl,
-}) => {
+export const BaseHeroModule: FC<
+  PropsWithChildren<IBaseHeroProps & ITextProps>
+> = ({ backgroundImageUrl, text }) => {
   const { classes } = useStyles();
 
   return (
@@ -20,14 +20,9 @@ export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
         zIndex={0}
       />
       <Container className={classes.container}>
-        <Title className={classes.title}>
-          A fully featured React components library
-        </Title>
+        <Title className={classes.title}>{text.heading}</Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
-          eos quas quibusdam repellat similique temporibus. Ab asperiores atque
-          cupiditate debitis dolorum fugit illo in nemo non pariatur quo ratione
-          similique sint, voluptas!
+          {text.paragraph}
         </Text>
 
         <Button
@@ -36,7 +31,7 @@ export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
           radius="xl"
           className={classes.control}
         >
-          Get started
+          {text.button}
         </Button>
       </Container>
     </div>
