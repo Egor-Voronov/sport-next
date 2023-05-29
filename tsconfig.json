@@ -26,7 +26,8 @@
     "allowSyntheticDefaultImports": true,
     "newLine": "crlf",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "importsNotUsedAsValues": "error"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
