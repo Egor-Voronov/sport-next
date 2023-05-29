@@ -1,5 +1,6 @@
 import { Meta } from "src/components/Meta";
 import type { FC } from "react";
+import { ReviewsHeroModule } from "../modules/Hero/ReviewsHero";
 
 export const Reviews: FC = () => {
   return (
@@ -8,7 +9,7 @@ export const Reviews: FC = () => {
         title="Отзывы"
         description="Мнение пользователей о продукции, производимой Sport-Next"
       />
-      <p>ревьюс</p>
+      <ReviewsHeroModule />
     </>
   );
 };

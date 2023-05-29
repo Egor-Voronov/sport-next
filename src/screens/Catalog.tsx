@@ -13,7 +13,7 @@ export const Catalog: FC = () => {
       <BaseHeroModule
         backgroundImageUrl="assets/hero/catalogBackground.png"
         text={catalogTxt}
-        btnPath="/"
+        btnPath="#catalog"
       />
     </>
   );

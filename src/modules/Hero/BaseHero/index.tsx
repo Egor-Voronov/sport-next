@@ -39,7 +39,12 @@ export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
           {text.paragraph}
         </Text>
 
-        <Link href={btnPath} onClick={() => setActiveLink(btnPath)}>
+        <Link
+          href={btnPath}
+          onClick={
+            btnPath.includes("/") ? () => setActiveLink(btnPath) : undefined
+          }
+        >
           <Button
             variant="gradient"
             size="xl"
