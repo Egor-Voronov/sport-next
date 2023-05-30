@@ -3,6 +3,7 @@ import { createStyles, rem } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   comment: {
     padding: `${theme.spacing.lg} ${theme.spacing.xl}`,
+    maxWidth: 400,
   },
 
   body: {

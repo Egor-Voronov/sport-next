@@ -42,9 +42,6 @@ export const ReviewsHeroModule: FC = () => {
               В каталог
             </Button>
           </Link>
-          <Link href="#reviews" className={classes.control}>
-            <Button size="lg">К отзывам</Button>
-          </Link>
         </div>
       </div>
     </Container>
