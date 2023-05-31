@@ -2,6 +2,7 @@ import { Meta } from "src/components/Meta";
 import type { FC } from "react";
 import { BaseHeroModule } from "../modules/Hero/BaseHero";
 import { catalogTxt } from "../modules/Hero/BaseHero/props";
+import { CatalogItems } from "../modules/CatalogItems";
 
 export const Catalog: FC = () => {
   return (
@@ -15,6 +16,7 @@ export const Catalog: FC = () => {
         text={catalogTxt}
         btnPath="#catalog"
       />
+      <CatalogItems />
     </>
   );
 };
