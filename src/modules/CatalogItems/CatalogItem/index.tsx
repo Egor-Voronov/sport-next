@@ -8,6 +8,7 @@ export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
   images,
   heading,
   paragraph,
+  clarification,
 }) => {
   const { classes } = useStyles();
 
@@ -42,6 +43,12 @@ export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
 
       <Group position="apart" mt="lg">
         <h1 className={classes.heading}>{heading}</h1>
+      </Group>
+
+      <Group spacing={5}>
+        <Text fz="xs" fw={500}>
+          {clarification}
+        </Text>
       </Group>
 
       <Text fz="sm" c="dimmed" mt="sm">

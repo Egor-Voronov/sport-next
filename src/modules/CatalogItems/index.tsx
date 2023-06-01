@@ -18,6 +18,7 @@ export const CatalogItems: FC = () => {
               images={item.images}
               heading={item.heading}
               paragraph={item.paragraph}
+              clarification={item.clarification}
             />
           );
         })}

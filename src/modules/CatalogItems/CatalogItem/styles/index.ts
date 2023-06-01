@@ -28,6 +28,7 @@ export const useStyles = createStyles(() => ({
     width: rem(4),
     height: rem(4),
     transition: "width 250ms ease",
+    backgroundColor: "#000",
 
     "&[data-active]": {
       width: rem(16),
