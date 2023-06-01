@@ -2,6 +2,7 @@ import { Meta } from "src/components/Meta";
 import { BaseHeroModule } from "../modules/Hero/BaseHero";
 import { homeTxt } from "../modules/Hero/BaseHero/props";
 import type { FC } from "react";
+import { VideoPresentation } from "../modules/VideoPresentation";
 
 export const Home: FC = () => {
   return (
@@ -15,6 +16,7 @@ export const Home: FC = () => {
         text={homeTxt}
         btnPath="/catalog"
       />
+      <VideoPresentation />
     </>
   );
 };
