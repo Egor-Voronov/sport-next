@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { CatalogItem } from "./CatalogItem";
 import { Heading } from "../../ui/Heading";
 import { useStyles } from "./styles";
+import { props } from "./props";
 
 export const CatalogItems: FC = () => {
   const { classes } = useStyles();
@@ -9,8 +10,17 @@ export const CatalogItems: FC = () => {
   return (
     <>
       <Heading text="каталог" />
-      <div className={classes.container}>
-        <CatalogItem />
+      <div className={classes.container} id="catalog">
+        {props.map((item) => {
+          return (
+            <CatalogItem
+              key={item.id}
+              images={item.images}
+              heading={item.heading}
+              paragraph={item.paragraph}
+            />
+          );
+        })}
       </div>
     </>
   );

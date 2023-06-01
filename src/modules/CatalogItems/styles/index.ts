@@ -1,8 +1,10 @@
-import { createStyles } from "@mantine/core";
+import { createStyles, rem } from "@mantine/core";
 
 export const useStyles = createStyles(() => ({
   container: {
     display: "flex",
-    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    gap: rem(90),
   },
 }));

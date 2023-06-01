@@ -1,8 +1,8 @@
 import { createStyles, getStylesRef, rem } from "@mantine/core";
 
-export const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles(() => ({
   container: {
-    maxWidth: rem(1000),
+    maxWidth: rem(800),
   },
 
   heading: {
