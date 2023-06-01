@@ -3,6 +3,7 @@ import { BaseHeroModule } from "../modules/Hero/BaseHero";
 import { homeTxt } from "../modules/Hero/BaseHero/props";
 import type { FC } from "react";
 import { VideoPresentation } from "../modules/VideoPresentation";
+import { Subscription } from "../modules/Subscription";
 
 export const Home: FC = () => {
   return (
@@ -17,6 +18,7 @@ export const Home: FC = () => {
         btnPath="/catalog"
       />
       <VideoPresentation />
+      <Subscription />
     </>
   );
 };

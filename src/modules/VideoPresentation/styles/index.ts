@@ -6,5 +6,7 @@ export const useStyles = createStyles(() => ({
     justifyContent: "center",
 
     width: "100%",
+
+    marginBottom: 60,
   },
 }));
