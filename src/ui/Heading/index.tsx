@@ -7,7 +7,7 @@ export const Heading: FC<PropsWithChildren<IHeadingProps>> = ({ text }) => {
 
   return (
     <div className={classes.container}>
-      <h1>{text}</h1>
+      <h1 className={classes.heading}>{text}</h1>
     </div>
   );
 };

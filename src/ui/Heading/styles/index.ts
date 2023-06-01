@@ -1,6 +1,6 @@
-import { createStyles } from "@mantine/core";
+import { createStyles, rem } from "@mantine/core";
 
-export const useStyles = createStyles(() => ({
+export const useStyles = createStyles((theme) => ({
   container: {
     width: "100%",
     textTransform: "uppercase",
@@ -8,5 +8,11 @@ export const useStyles = createStyles(() => ({
 
     display: "flex",
     justifyContent: "center",
+  },
+
+  heading: {
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: rem(20),
+    },
   },
 }));
