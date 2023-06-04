@@ -10,7 +10,6 @@ export const FAQ: FC = () => {
 
   return (
     <div className={classes.container}>
-      <Heading text="часто задаваемые вопросы" />
       <div className={classes.wrapper}>
         <Container size="lg">
           <Grid id="faq-grid" gutter={50}>
@@ -19,7 +18,7 @@ export const FAQ: FC = () => {
             </Col>
             <Col span={12} md={6}>
               <Title order={2} ta="left" className={classes.title}>
-                Frequently Asked Questions
+                Часто Задаваемые Вопросы
               </Title>
 
               <Accordion
@@ -34,9 +33,7 @@ export const FAQ: FC = () => {
                       className={classes.item}
                       value={item.title}
                     >
-                      <Accordion.Control>
-                        How can I reset my password?
-                      </Accordion.Control>
+                      <Accordion.Control>{item.title}</Accordion.Control>
                       <Accordion.Panel>{item.description}</Accordion.Panel>
                     </Accordion.Item>
                   );
