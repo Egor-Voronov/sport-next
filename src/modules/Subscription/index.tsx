@@ -22,7 +22,6 @@ export const Subscription: FC = () => {
               Подпишитесь на нашу новостную рассылку чтобы всегда знать
               актуальную информацию о спортивных товарах SPORT NEXT.
             </Text>
-
             <FormSubscription />
           </div>
           <Image alt="Баннер" src={image.src} className={classes.image} />

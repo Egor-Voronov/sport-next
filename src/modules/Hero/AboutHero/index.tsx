@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 
-export const AboutHeroModule = () => {
+export const AboutHero = () => {
   const { classes } = useStyles();
   const { active, setActiveLink } = useContext(LinksContext);
 

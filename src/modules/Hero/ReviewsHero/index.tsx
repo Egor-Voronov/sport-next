@@ -5,7 +5,7 @@ import { FC, useContext } from "react";
 import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 import Link from "next/link";
 
-export const ReviewsHeroModule: FC = () => {
+export const ReviewsHero: FC = () => {
   const { classes } = useStyles();
   const { active, setActiveLink } = useContext(LinksContext);
 

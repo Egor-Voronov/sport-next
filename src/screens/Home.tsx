@@ -1,5 +1,5 @@
 import { Meta } from "src/components/Meta";
-import { BaseHeroModule } from "../modules/Hero/BaseHero";
+import { BaseHero } from "../modules/Hero/BaseHero";
 import { homeTxt } from "../modules/Hero/BaseHero/props";
 import type { FC } from "react";
 import { VideoPresentation } from "../modules/VideoPresentation";
@@ -12,7 +12,7 @@ export const Home: FC = () => {
         title="Главная"
         description="Универсальное торговое предложение, которое может дать Sport-Next"
       />
-      <BaseHeroModule
+      <BaseHero
         backgroundImageUrl="assets/hero/homeBackground.jpg"
         text={homeTxt}
         btnPath="/catalog"

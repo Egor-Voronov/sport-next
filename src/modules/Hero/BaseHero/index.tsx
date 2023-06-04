@@ -6,7 +6,7 @@ import type { IBaseHeroProps } from "./types";
 import Link from "next/link";
 import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext";
 
-export const BaseHeroModule: FC<PropsWithChildren<IBaseHeroProps>> = ({
+export const BaseHero: FC<PropsWithChildren<IBaseHeroProps>> = ({
   backgroundImageUrl,
   text,
   btnPath,
