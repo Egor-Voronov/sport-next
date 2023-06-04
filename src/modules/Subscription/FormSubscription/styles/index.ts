@@ -1,4 +1,4 @@
-import { createStyles, rem } from "@mantine/core";
+import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
   controls: {
@@ -22,5 +22,14 @@ export const useStyles = createStyles((theme) => ({
     border: "none",
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
+  },
+
+  subscriptionContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: 5,
+
+    marginTop: 10,
+    position: "absolute",
   },
 }));
