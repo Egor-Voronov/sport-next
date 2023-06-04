@@ -41,7 +41,6 @@ export const useStyles = createStyles((theme) => ({
 
   image: {
     flex: 1,
-    paddingTop: `calc(${theme.spacing.xl} * 4)`,
 
     [theme.fn.smallerThan("md")]: {
       display: "none",
