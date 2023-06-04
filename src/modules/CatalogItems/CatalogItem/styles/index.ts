@@ -34,4 +34,8 @@ export const useStyles = createStyles(() => ({
       width: rem(16),
     },
   },
+
+  clarificationBold: {
+    fontSize: rem(14),
+  },
 }));

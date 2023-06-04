@@ -5,6 +5,7 @@ import type { FC, PropsWithChildren } from "react";
 import type { ICatalogItemProps } from "./types";
 
 export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
+  id,
   images,
   heading,
   paragraph,
@@ -13,7 +14,7 @@ export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
   const { classes } = useStyles();
 
   const slides = images.map((image) => (
-    <Carousel.Slide key={image}>
+    <Carousel.Slide key={id}>
       <Image
         onClick={(e) => {
           e.stopPropagation();
@@ -47,7 +48,12 @@ export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
 
       <Group spacing={5}>
         <Text fz="xs" fw={500}>
-          {clarification}
+          {clarification?.map((el) => (
+            <span key={id}>
+              <b className={classes.clarificationBold}>{el.heading}</b> -{" "}
+              {el.description}
+            </span>
+          ))}
         </Text>
       </Group>
 
