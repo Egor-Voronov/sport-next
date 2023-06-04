@@ -9,27 +9,11 @@ import {
   rem,
 } from "@mantine/core";
 import { useStyles } from "./style";
+import { FeaturesItem } from "./FeaturesItem";
 import { props } from "./props";
 
 export const Features = () => {
-  const { classes, theme } = useStyles();
-  const features = props.map((feature) => (
-    <Card
-      key={feature.title}
-      shadow="md"
-      radius="md"
-      className={classes.card}
-      padding="xl"
-    >
-      <feature.icon size={rem(50)} />
-      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
-        {feature.title}
-      </Text>
-      <Text fz="sm" c="dimmed" mt="sm">
-        {feature.description}
-      </Text>
-    </Card>
-  ));
+  const { classes } = useStyles();
 
   return (
     <Container size="lg" py="xl">
@@ -54,7 +38,9 @@ export const Features = () => {
         mt={50}
         breakpoints={[{ maxWidth: "md", cols: 1 }]}
       >
-        {features}
+        {props.map((feature) => (
+          <FeaturesItem key={feature.id} feature={feature} />
+        ))}
       </SimpleGrid>
     </Container>
   );
