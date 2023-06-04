@@ -15,6 +15,7 @@ export const CatalogItems: FC = () => {
           return (
             <CatalogItem
               key={item.id}
+              id={item.id}
               images={item.images}
               heading={item.heading}
               paragraph={item.paragraph}

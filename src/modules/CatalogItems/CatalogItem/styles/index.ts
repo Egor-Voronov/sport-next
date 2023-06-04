@@ -35,6 +35,11 @@ export const useStyles = createStyles(() => ({
     },
   },
 
+  clarificationContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+
   clarificationBold: {
     fontSize: rem(14),
   },

@@ -47,7 +47,7 @@ export const CatalogItem: FC<PropsWithChildren<ICatalogItemProps>> = ({
       </Group>
 
       <Group spacing={5}>
-        <Text fz="xs" fw={500}>
+        <Text fz="xs" fw={500} className={classes.clarificationContainer}>
           {clarification?.map((el) => (
             <span key={id}>
               <b className={classes.clarificationBold}>{el.heading}</b> -{" "}
