@@ -3,15 +3,14 @@ import { useState } from "react";
 import { Button, rem, Text, TextInput, ThemeIcon } from "@mantine/core";
 import { useStyles } from "./styles";
 import { useForm } from "react-hook-form";
-import type { FormData } from "./types";
 import { TbCheck } from "react-icons/tb";
 
 export const FormSubscription: FC = () => {
   const { classes } = useStyles();
-  const { register, handleSubmit, reset } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm();
 
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (): void => {
     setIsSubscribed(true);
     reset();
   };
