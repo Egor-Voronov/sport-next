@@ -1,11 +1,13 @@
-import { Text, Title, TextInput, Button, Image } from "@mantine/core";
+import { Text, Title, Image } from "@mantine/core";
 import image from "public/assets/subscription/banner.svg";
 import type { FC } from "react";
 import { Heading } from "../../ui/Heading";
 import { useStyles } from "./styles";
+import { FormSubscription } from "./FormSubscription";
 
 export const Subscription: FC = () => {
   const { classes } = useStyles();
+
   return (
     <>
       <Heading text="подписаться на рассылу" />
@@ -21,16 +23,7 @@ export const Subscription: FC = () => {
               актуальную информацию о спортивных товарах SPORT NEXT.
             </Text>
 
-            <div className={classes.controls}>
-              <TextInput
-                placeholder="Ваш email"
-                classNames={{
-                  input: classes.input,
-                  root: classes.inputWrapper,
-                }}
-              />
-              <Button className={classes.control}>Подписаться</Button>
-            </div>
+            <FormSubscription />
           </div>
           <Image alt="Баннер" src={image.src} className={classes.image} />
         </div>
