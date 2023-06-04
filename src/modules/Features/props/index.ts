@@ -1,4 +1,4 @@
-import { TbThumbUp, TbMoodCheck } from "react-icons/all";
+import { TbThumbUp, TbMoodCheck } from "react-icons/tb";
 import { FaRubleSign } from "react-icons/fa";
 
 let id = 0;

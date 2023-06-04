@@ -1,18 +1,35 @@
-import type { FC } from "react";
 import {
   Badge,
-  Container,
   Group,
-  SimpleGrid,
-  Text,
   Title,
+  Text,
+  Card,
+  SimpleGrid,
+  Container,
+  rem,
 } from "@mantine/core";
-import { FeaturesItem } from "./FeaturesItem";
 import { useStyles } from "./style";
 import { props } from "./props";
 
-export const Features: FC = () => {
-  const { classes } = useStyles();
+export const Features = () => {
+  const { classes, theme } = useStyles();
+  const features = props.map((feature) => (
+    <Card
+      key={feature.title}
+      shadow="md"
+      radius="md"
+      className={classes.card}
+      padding="xl"
+    >
+      <feature.icon size={rem(50)} />
+      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+        {feature.title}
+      </Text>
+      <Text fz="sm" c="dimmed" mt="sm">
+        {feature.description}
+      </Text>
+    </Card>
+  ));
 
   return (
     <Container size="lg" py="xl">
@@ -37,17 +54,7 @@ export const Features: FC = () => {
         mt={50}
         breakpoints={[{ maxWidth: "md", cols: 1 }]}
       >
-        {props.map((item) => {
-          return (
-            <FeaturesItem
-              id={item.id}
-              title={item.title}
-              description={item.description}
-              icon={item.icon}
-              key={item.id}
-            />
-          );
-        })}
+        {features}
       </SimpleGrid>
     </Container>
   );
