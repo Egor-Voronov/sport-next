@@ -12,7 +12,7 @@ export const BaseHero: FC<PropsWithChildren<IBaseHeroProps>> = ({
   btnPath,
 }) => {
   const { classes } = useStyles();
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { setActiveLink } = useContext(LinksContext);
   const splitHeading = text.heading.split("\n");
 
   return (

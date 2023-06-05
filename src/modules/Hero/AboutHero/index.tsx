@@ -15,7 +15,7 @@ import { LinksContext } from "../../../ui/NavigationLinks/NavigationLinksContext
 
 export const AboutHero = () => {
   const { classes } = useStyles();
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { setActiveLink } = useContext(LinksContext);
 
   return (
     <div>

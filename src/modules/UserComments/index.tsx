@@ -4,10 +4,11 @@ import type { FC } from "react";
 import { useStyles } from "./styles";
 import { Heading } from "../../ui/Heading";
 import {fetchComments} from "../../../api/operations/fetchData.mjs";
+import type {IComment} from './types'
 
 export const UserComments: FC = () => {
   const { classes } = useStyles();
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<IComment[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {

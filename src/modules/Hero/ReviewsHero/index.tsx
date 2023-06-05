@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const ReviewsHero: FC = () => {
   const { classes } = useStyles();
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { setActiveLink } = useContext(LinksContext);
 
   return (
     <Container className={classes.wrapper} size={1400}>

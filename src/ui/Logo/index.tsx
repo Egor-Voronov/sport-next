@@ -4,7 +4,7 @@ import { FC, useContext } from "react";
 import { LinksContext } from "../NavigationLinks/NavigationLinksContext";
 
 export const Logo: FC = () => {
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { setActiveLink } = useContext(LinksContext);
   return (
     <Link href="/" onClick={() => setActiveLink("/")}>
       <Image width={30} height={30} src="/assets/logo.svg" alt="Логотип" />

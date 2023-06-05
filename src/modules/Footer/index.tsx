@@ -12,7 +12,7 @@ export const FooterModule: FC<
   PropsWithChildren<INavigationLinksProps & ISocialProps>
 > = ({ links, socials }) => {
   const { classes } = useStyles();
-  const { active, setActiveLink } = useContext(LinksContext);
+  const { setActiveLink } = useContext(LinksContext);
   const items = links.map((link) => (
     <Link
       href={link.link}
