@@ -3,7 +3,6 @@ import image from "public/assets/FAQ/banner.svg";
 import { useStyles } from "./styles";
 import type { FC } from "react";
 import { props } from "./props";
-import { Heading } from "../../ui/Heading";
 
 export const FAQ: FC = () => {
   const { classes } = useStyles();

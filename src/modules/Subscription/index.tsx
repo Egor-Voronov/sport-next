@@ -10,7 +10,7 @@ export const Subscription: FC = () => {
 
   return (
     <>
-      <Heading text="подписаться на рассылу" />
+      <Heading text="подписаться на рассылку" />
       <div className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.body}>
