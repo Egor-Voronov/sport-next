@@ -9,7 +9,7 @@ let weights = [];
 let cardio = [];
 for (let i = 1; i < 3; i++) {
     weights.push(`https://raw.githubusercontent.com/Egor-Voronov/sport-next-client/master/public/assets/items/weights/${i}.webp`);
-    cardio.push(`https://raw.githubusercontent.com/Egor-Voronov/sport-next-client/master/public/assets/items/weights/${i}.webp`);
+    cardio.push(`https://raw.githubusercontent.com/Egor-Voronov/sport-next-client/master/public/assets/items/cardio/${i}.webp`);
 }
 
 let gloves = ["https://raw.githubusercontent.com/Egor-Voronov/sport-next-client/master/public/assets/items/gloves/2.webp"];
