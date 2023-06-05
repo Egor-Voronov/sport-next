@@ -5,12 +5,9 @@ import {
   Button,
   Group,
   Text,
-  List,
-  ThemeIcon,
-  rem,
+
 } from "@mantine/core";
 import { useStyles } from "./styles";
-import { TbCheck } from "react-icons/tb";
 import image from "public/assets/logo.svg";
 import Link from "next/link";
 import { useContext } from "react";

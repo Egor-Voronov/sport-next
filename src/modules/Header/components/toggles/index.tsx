@@ -17,10 +17,3 @@ export const ThemeToggle: FC = () => {
   );
 };
 
-export const LangToggle: FC = () => {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
-  return (
-    <Toggle onClick={() => {}}>{colorScheme === "dark" ? "ру" : "en"}</Toggle>
-  );
-};

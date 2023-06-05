@@ -1,7 +1,8 @@
 {
   "parserOptions": {
     "ecmaVersion": 2022,
-    "sourceType": "module"
+    "sourceType": "module",
+    "no-unudes-vars": "warning",
   },
   "extends": ["next/core-web-vitals", "eslint:recommended"]
 }

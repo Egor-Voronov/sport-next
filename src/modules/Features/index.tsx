@@ -2,11 +2,8 @@ import {
   Badge,
   Group,
   Title,
-  Text,
-  Card,
   SimpleGrid,
   Container,
-  rem,
 } from "@mantine/core";
 import { useStyles } from "./style";
 import { FeaturesItem } from "./FeaturesItem";
