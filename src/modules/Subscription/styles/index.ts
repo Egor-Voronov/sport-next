@@ -13,9 +13,6 @@ export const useStyles = createStyles((theme) => ({
     alignItems: "center",
     padding: `calc(${theme.spacing.xl} * 2)`,
     borderRadius: theme.radius.md,
-    border: `${rem(1)} solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[3]
-    }`,
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column-reverse",
