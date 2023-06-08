@@ -15,7 +15,10 @@ export const useStyles = createStyles((theme) => ({
     padding: `${theme.spacing.md} ${theme.spacing.md}`,
 
     [theme.fn.smallerThan("sm")]: {
-      flexDirection: "column",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: rem(30),
     },
   },
 
@@ -33,6 +36,9 @@ export const useStyles = createStyles((theme) => ({
 
   links: {
     [theme.fn.smallerThan("sm")]: {
+      display: "flex",
+      justifyContent: "center",
+      width: '100%',
       marginTop: theme.spacing.lg,
       marginBottom: theme.spacing.sm,
     },

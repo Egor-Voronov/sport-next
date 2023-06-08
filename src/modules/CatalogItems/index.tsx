@@ -19,7 +19,6 @@ export const CatalogItems: FC = () => {
     fetchData();
   }, []);
 
-
   return (
     <>
       <Heading text="каталог" />
