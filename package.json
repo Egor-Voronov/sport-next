@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css}\"",
-    "firebase": "node api/firebaseConfig.mjs"
+    "setCatalog": "node firebase/setData.mjs --catalog",
+    "setComments": "node firebase/setData.mjs --comments"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

@@ -1,10 +1,10 @@
 import { UserComment } from "./UserComment";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import type { FC } from "react";
 import { useStyles } from "./styles";
 import { Heading } from "../../ui/Heading";
-import {fetchComments} from "../../../api/operations/fetchData.mjs";
-import type {IComment} from './types'
+import { fetchComments } from "../../../firebase/operations/fetchData.mjs";
+import type { IComment } from "./types";
 
 export const UserComments: FC = () => {
   const { classes } = useStyles();
@@ -19,7 +19,7 @@ export const UserComments: FC = () => {
     fetchData();
   }, []);
 
-  console.log(comments)
+  console.log(comments);
 
   return (
     <div className={classes.container}>

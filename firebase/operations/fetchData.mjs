@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebaseConfig.mjs";
+import { db } from "../config.mjs";
 
 export const fetchComments = async () => {
   try {
