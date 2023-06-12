@@ -1,14 +1,17 @@
+import 'dotenv/config'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCVtqCCZcQ3wYqMpTokZSxQuW5Pn9QVG90",
-  authDomain: "sport-next.firebaseapp.com",
-  projectId: "sport-next",
-  storageBucket: "sport-next.appspot.com",
-  messagingSenderId: "983586181533",
-  appId: "1:983586181533:web:d9f8e67155324301c89f74",
+  apiKey: `${process.env.API_KEY}`,
+  authDomain: `${process.env.AUTH_DOMAIN}`,
+  projectId: `${process.env.PROJECT_ID}`,
+  storageBucket: `${process.env.STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.MESSAGING_SENDER_ID}`,
+  appId: `${process.env.APP_ID}`,
 };
+
+console.log(firebaseConfig)
 
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
