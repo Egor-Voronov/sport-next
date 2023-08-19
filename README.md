@@ -1,5 +1,8 @@
 # sport-next
 
+## deploy
+https://resilient-marshmallow-b4ec63.netlify.app/
+
 ## to install deps
 ```sh
 yarn
